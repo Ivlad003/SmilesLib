@@ -1,15 +1,14 @@
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
+apply plugin: 'com.novoda.bintray-release'
 
 android {
     compileSdkVersion 24
     buildToolsVersion "23.0.3"
     defaultConfig {
-        applicationId "iv.com.smileslib"
         minSdkVersion 15
         targetSdkVersion 24
         versionCode 1
         versionName "1.0"
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
         release {
@@ -20,10 +19,14 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
-        exclude group: 'com.android.support', module: 'support-annotations'
-    })
-    compile 'com.android.support:appcompat-v7:24.2.0'
-    testCompile 'junit:junit:4.12'
 }
+
+publish {
+    groupId = 'com.github.ivlad003'
+    artifactId = 'smileslib'
+    version = "1.0.2"
+    repoName="SmilesLib"
+    description = 'Super duper easy way to release your Android and other artifacts to bintray'
+    website = 'https://github.com/Ivlad003/SmilesLib'
+}
+
