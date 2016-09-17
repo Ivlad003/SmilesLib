@@ -30,7 +30,7 @@ Example use
 | sSetSmiles  | set map in fromat <"Smile code" , "Drawable id">  |
 | sAddSmile  | add smile parameter method "Smile code" , "Drawable id"  |
 | sAddSmiles  | add new smiles map to old map smile  |
-| setSmileHeight  | smile size |
+| setSmileHeight  | smile size `defoult line height` |
 
 License
 ----
