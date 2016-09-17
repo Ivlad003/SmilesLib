@@ -12,10 +12,13 @@ compile 'com.github.ivlad003:smileslib:1.0.2'
 
 
 Example use
-        TextView textView= (TextView) findViewById(R.id.text);
-        EmoticonsTextWatcher.sAddSmile("==+", R.mipmap.ic_launcher);
-        textView.addTextChangedListener(EmoticonsTextWatcher.newInstance(textView));
-        textView.setText(":) bla bla ==+");
+```sh
+ $TextView textView= (TextView) findViewById(R.id.text);
+ $EmoticonsTextWatcher.sAddSmile("==+", R.mipmap.ic_launcher);
+ $textView.addTextChangedListener(EmoticonsTextWatcher.newInstance(textView));
+ $textView.setText(":) bla bla ==+");
+```
+       
 sAddSmile add one smile         
 parameters first: keySmile second: resId
 
