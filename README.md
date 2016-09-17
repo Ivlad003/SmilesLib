@@ -6,12 +6,6 @@
 
 ```gradle
 
-repositories {
-    maven {
-        url 'https://dl.bintray.com/ivlad003/SmilesLib'
-    }
-}
-
 dependencies {
     compile 'com.github.ivlad003:smileslib:1.0.4'
 }
