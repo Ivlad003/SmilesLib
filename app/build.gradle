@@ -30,3 +30,4 @@ publish {
     website = 'https://github.com/Ivlad003/SmilesLib'
 }
 
+// ./gradlew clean build bintrayUpload -PbintrayUser=ivlad003 -PbintrayKey=6128459fad1e3fd22d7264d3175b5e710a535437 -PdryRun=false

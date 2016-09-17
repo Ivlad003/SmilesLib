@@ -28,11 +28,13 @@ public class EmoticonsTextWatcher implements TextWatcher {
         SmilesHelper.addSmile(smile, idRes);
     }
 
+    public static void setSmileHeight() {
+
+    }
+
     public void setmTextMessages(TextView mTextMessages) {
         this.mTextMessages = mTextMessages;
     }
-
-
 
     //"Smile code" , "Drawable id"
     //Example patternIntegerMap.put(":)", R.mipmap.emoji_1f642);
@@ -41,12 +43,15 @@ public class EmoticonsTextWatcher implements TextWatcher {
         return this;
     }
 
+    public static void sAddSmiles(Map<String, Integer> patternIntegerMap) {
+        SmilesHelper.addSmiles(patternIntegerMap);
+    }
+
     //"Smile code" , "Drawable id"
     public EmoticonsTextWatcher addSmile(String smile, Integer idRes) {
         SmilesHelper.addSmile(smile, idRes);
         return this;
     }
-
 
     @Override
     public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {

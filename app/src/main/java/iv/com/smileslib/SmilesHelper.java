@@ -17,8 +17,8 @@ import java.util.regex.Pattern;
 public class SmilesHelper {
     private static final Spannable.Factory spannableFactory = Spannable.Factory
             .getInstance();
-
     private static final Map<Pattern, Integer> emoticons = new HashMap<>();
+    private static int mSmileHeight = 0;
 
     static {
         addPattern(emoticons, ":)", R.mipmap.emoji_1f642);
@@ -44,6 +44,10 @@ public class SmilesHelper {
         addPattern(emoticons, ":-}", R.mipmap.emoji_1f602);
         addPattern(emoticons, ">:)", R.mipmap.emoji_1f608);
         addPattern(emoticons, "(:V)", R.mipmap.emoji_1f913);
+    }
+
+    public static void setmSmileHeight(int mSmileHeight) {
+        SmilesHelper.mSmileHeight = mSmileHeight;
     }
 
     private static void addPattern(Map<Pattern, Integer> map, String smile,
@@ -83,12 +87,21 @@ public class SmilesHelper {
 
     public static Spannable getSmiledText(Context context, CharSequence text, int height) {
         Spannable spannable = spannableFactory.newSpannable(text);
-        addSmiles(context, spannable, height);
+
+        addSmiles(context, spannable, SmilesHelper.mSmileHeight !=0
+                ? SmilesHelper.mSmileHeight : height);
+
         return spannable;
     }
 
     public static void replaceAllSmiles(Map<String, Integer> patternIntegerMap) {
         emoticons.clear();
+        for (Map.Entry<String, Integer> stringIntegerEntry : patternIntegerMap.entrySet()) {
+            addPattern(emoticons, stringIntegerEntry.getKey(), stringIntegerEntry.getValue());
+        }
+    }
+
+    public static void addSmiles(Map<String, Integer> patternIntegerMap) {
         for (Map.Entry<String, Integer> stringIntegerEntry : patternIntegerMap.entrySet()) {
             addPattern(emoticons, stringIntegerEntry.getKey(), stringIntegerEntry.getValue());
         }
