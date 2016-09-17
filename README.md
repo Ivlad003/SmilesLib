@@ -25,6 +25,10 @@ Example use
  textView.setText(":) bla bla ==+");
  
 ```
+| Metod | Info metod|
+| ------------- | ------------- |
+| sSetSmiles  | set map in fromat <"Smile code" , "Drawable id">  |
+| sAddSmile  | add smile parameter metod "Smile code" , "Drawable id"  |
 
 License
 ----
