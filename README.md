@@ -29,6 +29,8 @@ Example use
 | ------------- | ------------- |
 | sSetSmiles  | set map in fromat <"Smile code" , "Drawable id">  |
 | sAddSmile  | add smile parameter metod "Smile code" , "Drawable id"  |
+| sAddSmiles  | add new smiles map to old map smile  |
+| setSmileHeight  | smile size |
 
 License
 ----
