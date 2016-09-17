@@ -24,7 +24,7 @@ dependencies {
 publish {
     groupId = 'com.github.ivlad003'
     artifactId = 'smileslib'
-    version = "1.0.2"
+    version = "1.0.3"
     repoName="SmilesLib"
     description = 'Super duper easy way to release your Android and other artifacts to bintray'
     website = 'https://github.com/Ivlad003/SmilesLib'

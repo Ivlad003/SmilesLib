@@ -28,8 +28,8 @@ public class EmoticonsTextWatcher implements TextWatcher {
         SmilesHelper.addSmile(smile, idRes);
     }
 
-    public static void setSmileHeight() {
-
+    public static void setSmileHeight(int smileHeight) {
+        SmilesHelper.setmSmileHeight(smileHeight);
     }
 
     public void setmTextMessages(TextView mTextMessages) {
